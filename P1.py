@@ -4,6 +4,7 @@ import psutil
 import telnetlib
 import sys
 import string
+import time
 
 #connect to telenet
 tn = telnetlib.Telnet('192.168.4.1')
@@ -39,13 +40,11 @@ ps1 = ps0
 while(ps1-ps0<duration):
 	psOut = psutil.cpu_times()
 	pstemp = psOut[0]
-
 	if(pstemp-ps1>=0.2):
 		ps1 = pstemp
 		powerOut =  tn.read_until("\n")
 		power = powerOut[12:17]
-		psOut = psutil.cpu_times()
-
+		psOut = psOut[0]
 		file1 = open(C4_thermal_sensor,"r")
 		file2 = open(C5_thermal_sensor,"r")
 		file3 = open(C6_thermal_sensor,"r")
@@ -72,6 +71,7 @@ while(ps1-ps0<duration):
 		P0volt = file11.read()
 		P4freq = file12.read()
 		P4volt = file13.read()
+		#print ps1
 		#print "Temp C4: ", C4temp
 		#print "Temp C5: ", C5temp
 		#print "Temp C6: ", C6temp
