@@ -57,7 +57,7 @@ while(ps1-ps0<duration):
 
 	if(pstemp-ps1>=0.2):
 		ps1 = pstemp
-	    powerOut =  tn.read_until("\n")
+		powerOut =  tn.read_until("\n")
 		power = powerOut[12:17]
 		psOut = psutil.cpu_times()
 
