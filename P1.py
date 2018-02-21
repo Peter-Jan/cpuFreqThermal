@@ -27,7 +27,7 @@ file = open(P4_cluster_freq_set,"w")
 file.write(freq1)
 file.close
 
-dur = sys.argv[3]
+duration = sys.argv[3]
 
 #start timer
 psOut = psutil.cpu_times()
