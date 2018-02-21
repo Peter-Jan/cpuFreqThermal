@@ -48,7 +48,10 @@ file10 = open(P0_cluster_freq_read,"r")
 file11 = open(little_micro_volts,"r")
 file12 = open(P4_cluster_freq_read,"r")
 file13 = open(big_micro_volts,"r")
-
+file14 = open("data_log/little_freq.txt","a")
+file15 = open("data_log/little_volt.txt","a")
+file16 = open("data_log/big_freq.txt","a")
+file17 = open("data_log/big_volt.txt","a")
 
 #Record Data
 while(ps1-ps0<duration):
@@ -85,10 +88,10 @@ while(ps1-ps0<duration):
 		file7.write(C6temp.replace('\n','')+",")
 		file8.write(C7temp.replace('\n','')+",")
 		file9.write(power+",")
-		file10.write(P0freq.replace('\n','')+",")
-		file11.write(P0volt.replace('\n','')+",")
-		file12.write(P4freq.replace('\n','')+",")
-		file13.write(P0volt.replace('\n','')+",")
+		file14.write(P0freq.replace('\n','')+",")
+		file15.write(P0volt.replace('\n','')+",")
+		file16.write(P4freq.replace('\n','')+",")
+		file17.write(P0volt.replace('\n','')+",")
 
 
 
@@ -105,5 +108,9 @@ file10.close
 file11.close
 file12.close
 file13.close
+file14.close
+file15.close
+file16.close
+file17.close
 
 
