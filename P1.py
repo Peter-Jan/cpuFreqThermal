@@ -1,13 +1,8 @@
 import os
+from sysfs_paths import *
 
-
-C0_temp  = '/sys/devices/virtual/thermal/thermal_zone0/'
-#0_cpu_cluster = 0_cpu_core_base + "related_cpus"
-
-
-os.chdir(C0_temp)
-name = "temp"
-file1 = open(name,"r")
-print file1.read()
+name = C0_cpu_freq_set
+file1 = open(name,"w")
+print file1.write(200000)
 file1.close
 
