@@ -8,8 +8,17 @@ import time
 import math
 
 #set controller gains
-P = 1
-I = 1
+P = 0.25
+I = 0.1
+
+#Parameters
+TEMP_LIM = 70
+USAGE_THRESHOLD = 80
+FREQ_AVAIL = [200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,
+	      1000000, 1100000, 1200000, 1300000, 1400000, 1500000, 1600000, 1700000,
+	      1800000, 1900000, 2000000]
+FREQ_RES = 19
+TARGET_LOAD = USAGE_THRESHOLD * 0.8
 
 #connect to telenet
 tn = telnetlib.Telnet('192.168.4.1')
@@ -22,15 +31,6 @@ file.close
 file = open(P4_cluster_gov,"w")
 file.write("userspace")
 file.close
-
-#Max Temp
-TEMP_LIM = 70
-USAGE_THRESHOLD = 80
-FREQ_AVAIL = [200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,
-	      1000000, 1100000, 1200000, 1300000, 1400000, 1500000, 1600000, 1700000,
-	      1800000, 1900000, 2000000]
-FREQ_RES = 19
-TARGET_LOAD = USAGE_THRESHOLD * 0.8
 
 #initialize
 headroom = 0
