@@ -39,20 +39,20 @@ while(1):
 	# power = powerOut[12:17]
 	# psOut = psOut[0]
 	
-	 file1 = open(C4_thermal_sensor,"r")
-	 file2 = open(C5_thermal_sensor,"r")
-	 file3 = open(C6_thermal_sensor,"r")
-	 file4 = open(C7_thermal_sensor,"r")
+	file1 = open(C4_thermal_sensor,"r")
+	file2 = open(C5_thermal_sensor,"r")
+	file3 = open(C6_thermal_sensor,"r")
+	file4 = open(C7_thermal_sensor,"r")
 
-	 C4temp = file1.read()
-	 C5temp = file2.read()
-	 C6temp = file3.read()
-	 C7temp = file4.read()
+	C4temp = file1.read()
+	C5temp = file2.read()
+	C6temp = file3.read()
+	C7temp = file4.read()
 
-	 file1.close
-	 file2.close
-	 file3.close
-	 file4.close
+	file1.close
+	file2.close
+	file3.close
+	file4.close
 	
 	print "Temp: ",C4temp," ",C5temp," ",C6temp," ",C7temp
 
