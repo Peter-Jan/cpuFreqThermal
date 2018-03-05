@@ -27,26 +27,33 @@ file.close
 #Record Data
 while(1):
 
-	usage = psutil.cpu_percent(interval=None)
-	print usage
+	usage = psutil.cpu_percent(interval=1,percpu=True)
+	C4_usage = usage[4]
+	C5_usage = usage[5]
+	C6_usage = usage[6]
+	C7_usage = usage[7]
+	print "Usage: ",C4_usage," ",C5_usage," ",C6_usage," ",C7_usage
+	
 	# ps1 = pstemp
 	# powerOut =  tn.read_until("\n")
 	# power = powerOut[12:17]
 	# psOut = psOut[0]
-	# file1 = open(C4_thermal_sensor,"r")
-	# file2 = open(C5_thermal_sensor,"r")
-	# file3 = open(C6_thermal_sensor,"r")
-	# file4 = open(C7_thermal_sensor,"r")
+	
+	 file1 = open(C4_thermal_sensor,"r")
+	 file2 = open(C5_thermal_sensor,"r")
+	 file3 = open(C6_thermal_sensor,"r")
+	 file4 = open(C7_thermal_sensor,"r")
 
-	# C4temp = file1.read()
-	# C5temp = file2.read()
-	# C6temp = file3.read()
-	# C7temp = file4.read()
+	 C4temp = file1.read()
+	 C5temp = file2.read()
+	 C6temp = file3.read()
+	 C7temp = file4.read()
 
-	# file1.close
-	# file2.close
-	# file3.close
-	# file4.close
-
+	 file1.close
+	 file2.close
+	 file3.close
+	 file4.close
+	
+	print "Temp: ",C4temp," ",C5temp," ",C6temp," ",C7temp
 
 
