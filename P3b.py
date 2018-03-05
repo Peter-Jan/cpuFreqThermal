@@ -64,20 +64,20 @@ while(1):
 	maxTemp = max([C4temp,C5temp,C6temp,C7temp])
 	headroom = TEMP_LIM-maxTemp
 
-	if headroom <= 0:
-#		file = open(P4_cluster_freq_set,"w")
-#		file.write(freq)
-#		file.close
-#		headroom_integral = 0
-	else:
-#		steps = floor(headroom*P+headroom_integral*I)
-#		max_allowed += steps
+# 	if headroom <= 0:
+# #		file = open(P4_cluster_freq_set,"w")
+# #		file.write(freq)
+# #		file.close
+# #		headroom_integral = 0
+# 	else:
+# #		steps = floor(headroom*P+headroom_integral*I)
+# #		max_allowed += steps
 
-	if maxUsage > USAGE_THRESHOLD:
-#		file = open(P4_cluster_freq_set,"w")
-#		file.write(max_allowed)
-#		file.close
-	else:
+# 	if maxUsage > USAGE_THRESHOLD:
+# #		file = open(P4_cluster_freq_set,"w")
+# #		file.write(max_allowed)
+# #		file.close
+# 	else:
 #		file = open(P4_cluster_freq_set,"w")
 #		file.write(freq)
 #		file.close
