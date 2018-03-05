@@ -70,7 +70,7 @@ while(1):
 #		file.close
 #		headroom_integral = 0
 	else:
-		steps = floor(headroom*P+headroom_integral*I)
+#		steps = floor(headroom*P+headroom_integral*I)
 #		max_allowed += steps
 
 	if maxUsage > USAGE_THRESHOLD:
