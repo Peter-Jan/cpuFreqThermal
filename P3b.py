@@ -48,7 +48,10 @@ while(1):
 	C5temp = file2.read()
 	C6temp = file3.read()
 	C7temp = file4.read()
-
+	C4temp = double(C4temp.replace('\n','')+","))
+	C5temp = double(C5temp.replace('\n','')+","))
+	C6temp = double(C6temp.replace('\n','')+","))
+	C7temp = double(C7temp.replace('\n','')+","))
 	file1.close
 	file2.close
 	file3.close
