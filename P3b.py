@@ -95,14 +95,17 @@ while(1):
 		curFreq = max_allowed
 	else:
 		if curUsage > 0:
-			newFreq = round((curFreq/(TARGET_LOAD/curUsage))/100000)*100000
+			newFreq = round((curFreq/(TARGET_LOAD-0.2/curUsage))/100000)*100000
 		else:
 			newFreq = FREQ_AVAIL[0]
+		if newFreq < 200000:
+			newFreq = 200000
 		file = open(P4_cluster_freq_set,"w")
 		file.write(str(newFreq))
 		file.close
 		curFreq = newFreq
 	print "maxTemp: ",maxTemp
+	print "max_allowed: ", max_allowed
 	print "steps: ",steps
 	print "newFreq: ",newFreq
 	print "curFreq: ", curFreq, "\n"
